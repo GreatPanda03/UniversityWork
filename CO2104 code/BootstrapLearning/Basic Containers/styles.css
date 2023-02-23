@@ -1,0 +1,17 @@
+body {
+    padding: 10px;
+}
+
+#introduction {
+    font-size: 20px;
+}
+
+.generic-container {
+    background: rgb(230,240,255);
+    margin: 10px auto;
+}
+
+.generic-container > h3, div.generic-container > p {
+    text-align: center;
+    color: rgb(75,150,255);
+}
