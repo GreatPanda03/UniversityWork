@@ -18,6 +18,14 @@ function validate() {
     } else {
         attempts -= 1;
         alert("Login unsuccessful. You have " + attempts + " attempt(s) left.")
+        
+        // hiding the login form to prevent further attempts
+        if (attempts == 0) {
+            document.getElementById("username").disabled = true;
+            document.getElementById("password").disabled = true;
+            document.getElementById("submit").disabled = true;
+        }
+        
         return false;
     }
 }

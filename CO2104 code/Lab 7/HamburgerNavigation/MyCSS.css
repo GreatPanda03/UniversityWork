@@ -1,0 +1,28 @@
+/* the color of the top navigation bar */
+.topnav {
+    width: 100%;
+    height: 50px;
+    background-color: teal;
+}
+
+/* when a nav bar link hasn't been clicked yet */
+.topnav a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    font-size: 20px;
+}
+
+/* when a nav bar link is hovered over */
+.topnav a:hover {
+    background-color: lime;
+    color: black;
+}
+
+/* when a nav bar link is currently selected
+i.e., when we're at the page led to by the link */
+.topnav a.active {
+    background-color: yellow;
+    color: black;
+}
