@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Login example</title>
+        <script src="login.js"></script>
+
+        <!-- importing jquery to use dollar ($) notation -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    </head>
+
+    <body>
+        <h2>Javascript Login Page</h2>
+
+        <!-- login form with username and password entries -->
+        <form id="form_id" method="post" name="myform">
+            <label>Username:</label>
+            <input type="text" name="username" id="username"/>
+
+            <label>Password:</label>
+            <input type="password" name="password" id="password"/>
+
+            <input type="button" value="Login" id="submit" onclick="validate()"/>
+        </form>
+    </body>
+</html>
