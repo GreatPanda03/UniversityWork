@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>CO2104 Lab 8</title>
+	<link type="text/css" rel="stylesheet" href="styles.css">
+</head>
+
+<!-- the base of the to-do list -->
+<body>
+	<h1 id="title">CO2104 Lab 8</h1>
+	<h2 id="subtitle">Task 2: Local Storage</h2>
+
+	<input id="myInput"> </input>
+	
+	<button id="addButton" onclick="addTask()">Add</button>
+	
+	<button id="clearButton" onclick="clearTasks()">Clear</button>
+	
+	<ul id="myList"> 
+	
+	</ul>
+</body>
+
+<script>
+	var taskInput = document.getElementById("myInput");
+	var taskList = document.getElementById("myList");
+
+	// auxiliary function to load tasks when page is refreshed
+	window.onload = function() {
+		if (localStorage.tasks) {
+			taskList.innerHTML = localStorage.tasks;
+		}
+	};
+
+	// adds a task with the given text to the to-do list
+	function addTask() {
+		var newTask = document.createElement("li");
+		newTask.innerHTML = taskInput.value;
+		taskList.append(newTask);
+
+		localStorage.tasks = taskList.innerHTML;
+		console.log(localStorage.tasks);
+	}
+
+	// clears all tasks in the to-do list visually and from local storage
+	function clearTasks() {
+		taskList.innerHTML = "";
+		localStorage.tasks = "";
+	}
+</script>
+
+</html>

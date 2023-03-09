@@ -1,0 +1,13 @@
+body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#title {
+    text-align: center;
+    line-height: 0;
+}
+
+#subtitle {
+    text-align: center;
+    font-weight: normal;
+}

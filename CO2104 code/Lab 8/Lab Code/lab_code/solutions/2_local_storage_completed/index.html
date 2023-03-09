@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+	<input id="myInput"> </input>
+	
+	<button id="addButton" onclick="addTask()">Add</button>
+	
+	<button id="clearButton" onclick="clearTasks()">Clear</button>
+	
+	<ul id="myList"> 
+
+	</ul>
+</body>
+<script>
+function addTask() {
+	var myInput = document.getElementById("myInput");
+	var myList = document.getElementById("myList");
+	myList.innerHTML+= "<li>" + myInput.value + "</li>";
+	window.localStorage.setItem("tasks",myList.innerHTML);
+}
+
+window.onload = function loadPage () {
+	var myList = document.getElementById("myList");
+	myList.innerHTML = window.localStorage.getItem("tasks");
+}
+
+function clearTasks() {
+	window.localStorage.clear();
+	location.reload();
+}
+
+</script>
+</html>

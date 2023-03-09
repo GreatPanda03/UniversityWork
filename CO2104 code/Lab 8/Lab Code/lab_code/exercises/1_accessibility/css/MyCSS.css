@@ -1,0 +1,27 @@
+body {
+    padding: 10px;
+}
+
+#title {
+    font-weight: bold;
+    text-align: center;
+    line-height: 0;
+}
+
+#subtitle {
+    text-align: center;
+}
+
+#directions-div {
+    text-align: center;
+}
+
+.directional-radio {
+    background-color: #555;
+    color: #FFF;
+    margin: 0 25px;
+}
+
+#dangerous-div {
+    margin-bottom: 10px;
+}

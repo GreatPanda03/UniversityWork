@@ -1,0 +1,76 @@
+<DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/MyCSS.css">
+
+<script>
+$(function () {
+	$('[data-toggle="tooltip"]').tooltip()
+  })
+
+
+function speak(){
+var msg = new SpeechSynthesisUtterance();
+msg.text = document.getElementById("txt").value;
+window.speechSynthesis.speak(msg);
+//alert("ok")
+}
+</script>
+
+<style>
+label {
+    background:#282727;
+    color:#fff;
+    border-radius:10px;  
+    padding:40px;
+    margin:30px;
+    cursor:pointer;
+}
+
+button{
+	margin:30px;
+	margin-bottom: 40px;
+	
+}
+
+label:hover {
+    background:#ccc;   
+}
+
+input {
+    margin-right:10px;   
+	margin-left:1em;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+	</style>
+
+</head>
+
+<body>
+
+
+
+	<label><input name="opt" type="radio">Left</label>
+	<label><input name="opt" type="radio">Right</label>
+
+
+
+	<p>
+
+<button id="btn" type="button" class="btn btn-danger" data-toggle="tooltip"  data-placement="right" data-html="true" title="Please do <em>NOT</em> click this button.">
+	A dangerous button
+  </button>
+
+
+<p>
+
+
+<input type="text" name="txt" id="txt" text="speak" value="How are you?"></input><button id="btn" type="button" onclick="speak()">speak</button>
+
+</body>
+
+</html>

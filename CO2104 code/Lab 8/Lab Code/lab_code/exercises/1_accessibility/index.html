@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<!-- See comments below or 'MyCSS.css' for Bootstrap changes -->
+
+<html>
+
+<head>
+	<!-- imports and other links -->
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/MyCSS.css">
+</head>
+
+<body>
+	<h1 id="title">CO2104 Lab 8</h1>
+	<h2 id="subtitle">Task 1: Accessibility</h2>
+
+	<br/>
+
+	<!-- setting the class of the surrounding label for each radio button -->
+	<div id="directions-div">
+		<label class="btn btn-lg btn-default directional-radio">
+			<input name="opt" type="radio"/>Left
+		</label>
+		
+		<label class="btn btn-lg btn-default directional-radio">
+			<input name="opt" type="radio"/>Right
+		</label>
+	</div>
+
+	<!-- adds a tooltip to the dangerous button (see JS code above)
+		* 'data-toggle' specifies that a tooltip will be used
+		* 'title' specifies the tooltip text
+		* 'data-html' lets us use HTML in the tooltip
+	-->
+	<div id="dangerous-div">
+		<button id="btn" type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="right" data-html="true" title="Please do <em>NOT</em> click this button.">
+			A dangerous button
+		</button>
+	</div>
+
+	<!-- text-to-speech components (see JS code above) -->
+	<input type="text" name="tts-entry" id="txt" text="speak" value="Allez-vous bien?"/>
+	<button id="btn" name="tts-button" type="button">speak</button>
+</body>
+
+<script>
+	// required for the dangerous button's tooltip below!
+	$(function () {
+		$('[data-toggle="tooltip"]').tooltip()
+  	})
+
+	// used for text-to-speech button
+	var ttsEntry = document.getElementsByName("tts-entry")[0];
+	var ttsButton = document.getElementsByName("tts-button")[0];
+
+	ttsButton.addEventListener('click', function() {
+		var msg = new SpeechSynthesisUtterance();
+		msg.text = ttsEntry.value;
+		msg.lang = "fr"; // set the language to french for fun
+		window.speechSynthesis.speak(msg);
+		
+		// console.log(msg); // prints interesting things about msg!
+	});
+</script>
+
+</html>
