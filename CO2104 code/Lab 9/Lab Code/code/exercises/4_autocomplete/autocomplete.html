@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Autocomplete - Default functionality</title>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="https://jqueryui.com/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+  
+  <script>
+    // source for jQuery autocomplete: https://jqueryui.com/autocomplete/
+
+    $(function() {
+      var availableCountries = [
+        "United Kingdom",
+        "France",
+        "Spain",
+        "Italy",
+        "Germany",
+        "Finland",
+        "Sweden",
+        "Norway",
+        "Poland",
+        "Iceland",
+        "Switzerland"
+      ]
+
+      $("#countries").autocomplete({
+        source: availableCountries // list of countries (strings)
+      });
+    });
+  </script>
+</head>
+
+<body> 
+  <p>This page demonstrates jQuery's autocomplete widget.</p>
+  <p>Start typing the name of a country in the search bar below!</p>
+
+  <!-- ui-widget allows there to be an autocomplete dropdown -->
+  <div class="ui-widget"> 
+    <label for="countries">Tags: </label>
+    <input id="countries">
+  </div>
+</body>
+</html>

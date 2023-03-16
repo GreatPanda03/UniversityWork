@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title> Task manager</title>
+
+<link id="pagestyle" rel="stylesheet" type="text/css" href="css/MyCSS.css">
+
+<script type="text/javascript">
+function swapStyleSheet(sheet) {
+	document.getElementById("pagestyle").setAttribute("href","css/"+sheet);
+}
+
+function fontSizeSmaller() {
+	document.getElementById("maintext").style.fontSize = "smaller";
+}
+
+function fontSizeNormal() {
+	document.getElementById("maintext").style.fontSize = "inherit";
+}
+
+function fontSizeLarger() {
+	document.getElementById("maintext").style.fontSize = "larger";
+}
+</script>
+
+</head>
+
+<body>
+
+<center>
+<div class="container">
+
+<div class="header">
+<h1> MY WEBSITE </h1>
+</div>
+
+<div class="linksnav">
+</br>
+<button onclick="swapStyleSheet('MyCSS.css')">Blue StyleSheet</button>
+</br>
+<button onclick="swapStyleSheet('AlternativeCSS.css')">Green StyleSheet</button>
+</br>
+<button onclick="fontSizeSmaller()">Shrink Text</button>
+</br>
+<button onclick="fontSizeNormal()">Normal Text</button>
+</br>
+<button onclick="fontSizeLarger()">Enlarge Text</button>
+
+</br></br>
+	<a href="#">Link</a></br>
+	<a href="#">Link</a></br>
+	<a href="#">Link</a></br>
+</div>
+
+<div class="mainsection">
+	<p id="maintext" > This is my main body of text. </p>
+</div>
+
+<div class="footerbar">
+	<p> Details about the site. </p>
+</div>
+
+</div>
+</body>
+</html>

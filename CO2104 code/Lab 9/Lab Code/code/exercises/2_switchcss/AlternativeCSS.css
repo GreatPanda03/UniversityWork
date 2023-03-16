@@ -1,0 +1,53 @@
+.container {
+	width:1000px;
+}
+
+/* 
+
+"font-family" was original "Verdana", but apparently it doesn't work :/
+I changed it to "sans-serif" instead 
+* attempted on University computer on both Firefox and Chrome
+
+*/
+
+.header {
+	width:100%;
+	height:200px;
+	padding: 10px 0;
+	background-color:green;
+	font-family:sans-serif;
+	font-weight: bold;
+	font-size: 40px;
+	text-align: center;
+}
+
+.linksnav {
+	width:20%;
+	height:600px;
+	background-color:yellow;
+	font-size: 32px;
+	font-family:sans-serif;	
+	text-align: center;
+	float:left;
+}
+
+.mainsection {
+	width:80%;
+	height:600px;
+	background-color:white;
+	font-size: 28px;
+	font-family:sans-serif;
+	text-align: center;
+	float:right;
+}
+
+.footerbar {
+	width:100%;
+	height:100px;
+	background-color:green;
+	font-size:28px;
+	font-family:sans-serif;
+	text-align:center;
+	float:left;
+}
+

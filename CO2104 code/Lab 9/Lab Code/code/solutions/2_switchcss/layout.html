@@ -1,0 +1,48 @@
+<DOCTYPE html>
+<html>
+<head>
+<title> Layout example</title>
+
+<link id="pagestyle" rel="stylesheet" type="text/css" href="MyCSS.css">
+
+<script type="text/javascript">
+
+function swapStyleSheet(sheet){
+	document.getElementById('pagestyle').setAttribute('href', sheet);
+}
+
+</script>
+
+</head>
+<body>
+
+<center>
+<div class="container">
+
+<div class="header">
+<h1>MY WEBSITE</h1>
+</div>
+
+<div class="linksnav">
+<br />
+<button onclick="swapStyleSheet('MyCSS.css')">Blue StyleSheet</button>
+<br />
+<button onclick="swapStyleSheet('AlternativeCSS.css')">Green StyleSheet</button>
+<p />
+
+  <a href="#">Link</a></br>
+  <a href="#">Link</a></br>
+  <a href="#">Link</a></br>
+</div>
+
+<div class="mainsection">
+  <p> This is my  main body of text. I could have some pictures in this section too.</p>
+</div>
+
+<div class="footerbar">
+  <p> Details about the site like contact details and copyright.</p>
+</div>
+</div>
+
+</body>
+</html>

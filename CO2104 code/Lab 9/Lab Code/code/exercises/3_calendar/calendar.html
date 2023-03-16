@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset='utf-8' />
+  <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.10.2/main.css' rel='stylesheet' />
+  <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.10.2/main.js'></script>
+  
+  <!-- for more details, see https://fullcalendar.io/docs/initialize-globals -->
+  <!-- main page: https://fullcalendar.io/ -->
+
+  <script>
+
+    // go back to March 2022 to view the dates!
+    document.addEventListener('DOMContentLoaded', function() {
+      var calendarEl = document.getElementById('calendar');
+      var calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth',
+        editable: true, // events can be dragged and altered (size)
+        selectable: true, // days can be clicked on
+        businessHours: true, // format is hh:mm a/p e.g. 10:30p for 10:30 PM
+        dayMaxEvents: true,
+        events: [ // list of events
+          {
+            title: 'Career Fairs',
+            start: '2022-03-03',
+            url: 'http://www.le.ac.uk'
+          },
+          {
+            title: 'Happy days',
+            start: '2022-03-07',
+            end: '2022-03-10'
+          },
+          {
+            title: 'Meeting',
+            start: '2022-03-12T10:30:00',
+            end: '2022-03-12T12:30:00'
+          },
+          {
+            title: 'Lunch',
+            start: '2022-03-12T12:00:00'
+          },
+          { // created 'Angry days' and 'Confused days' myself :( (p.s, im ok)
+            title: 'Angry days',
+            start: '2022-03-04',
+            end: '2022-03-07'
+          },
+          {
+            title: 'Confused days',
+            start: '2022-03-06',
+            end: '2022-03-08'
+          }
+        ], 
+        eventClick: function(info) {
+          info.jsEvent.preventDefault();
+          if (info.event.url) {
+            alert(info.event.url);
+            //window.open(info.event.url);
+          }
+        }
+      }); // end of calendar creation
+
+      calendar.render();
+    }); // end of DOM content loaded event
+  </script>
+
+  <style>
+    body {
+      margin: 40px 10px;
+      padding: 0;
+      font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+      font-size: 14px;
+    }
+
+    #calendar {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div id='calendar'></div>
+</body>
+</html>
